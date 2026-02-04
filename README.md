@@ -1,73 +1,139 @@
-# Welcome to your Lovable project
+# Quoota Access Hub - Enterprise Portal
 
-## Project info
+A modern enterprise portal built with Next.js 16, React 19, and shadcn/ui for managing benefits and capital resources.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Project Info
 
-## How can I edit this code?
+**Repository**: Gamartinez25/quoota-access-hub
 
-There are several ways of editing your application.
+## Technology Stack
 
-**Use Lovable**
+This project uses:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Next.js 16** - React framework with App Router
+- **React 19** - Latest React features
+- **TypeScript** - Type-safe development
+- **shadcn/ui** - High-quality UI components
+- **Tailwind CSS** - Utility-first styling
+- **Lucide React** - Icon library
 
-Changes made via Lovable will be committed automatically to this repo.
+## Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js 18+ 
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd quoota-access-hub
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:3000`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+quoota-access-hub/
+├── app/                           # Next.js App Router
+│   ├── layout.tsx                # Root layout
+│   ├── page.tsx                  # Home page
+│   ├── globals.css               # Global styles
+│   ├── benefits/                 # Benefits module routes
+│   │   └── dashboard/page.tsx
+│   └── capital/                  # Capital module routes
+│       └── employees/page.tsx
+├── components/
+│   ├── layout/                   # Layout components
+│   │   ├── MainLayout.tsx
+│   │   ├── AppSidebar.tsx
+│   │   └── Header.tsx
+│   ├── dashboard/                # Dashboard components
+│   │   ├── StatCard.tsx
+│   │   ├── WalletCard.tsx
+│   │   ├── RecentTransactions.tsx
+│   │   └── EmployeeTable.tsx
+│   └── ui/                       # shadcn/ui components
+├── contexts/
+│   └── PermissionsContext.tsx    # Permissions management
+├── types/
+│   └── permissions.ts            # Type definitions
+├── lib/
+│   └── utils.ts                  # Utility functions
+└── public/                       # Static assets
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Features
 
-## What technologies are used for this project?
+- **Benefits Module**: Manage corporate wallet, fund allocation, and benefits cards
+- **Capital Module**: Employee management, payroll, and reporting
+- **Role-based Access**: Permission system for module and submodule access
+- **Responsive Design**: Mobile-first responsive interface
+- **Dark Mode Ready**: Built with dark mode support
 
-This project is built with:
+## Development
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Available Scripts
 
-## How can I deploy this project?
+```bash
+# Start development server
+npm run dev
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+# Build for production
+npm run build
 
-## Can I connect a custom domain to my Lovable project?
+# Start production server
+npm start
 
-Yes, you can!
+# Run linting
+npm run lint
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Environment Variables
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Create a `.env.local` file in the root directory for local development:
+
+```
+# Add environment variables here
+```
+
+## Deployment
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will automatically detect Next.js and configure the build settings
+4. Your application will be deployed automatically on every push to main
+
+## Module Access
+
+The application uses a permission system to control access to different modules:
+
+- **Benefits Module**: Dashboard, Wallet, Cards, Transactions
+- **Capital Module**: Employees, Payroll, Reports
+
+User permissions are managed through the `PermissionsContext` and can be updated based on user roles.
+
+## Contributing
+
+1. Create a feature branch (`git checkout -b feature/amazing-feature`)
+2. Commit your changes (`git commit -m 'Add amazing feature'`)
+3. Push to the branch (`git push origin feature/amazing-feature`)
+4. Open a Pull Request
+
+## License
+
+This project is private and confidential.
+
